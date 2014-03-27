@@ -1,0 +1,110 @@
+[*]
+[*] GTKWave Analyzer v3.3.37 (w)1999-2012 BSI
+[*] Sat Nov  3 10:29:12 2012
+[*]
+[dumpfile] "/Users/chris/Documents/Stanford/12-13/Autumn/EE108B_CA/lab3_sol/mipstest.vcd"
+[dumpfile_mtime] "Sat Nov  3 10:28:53 2012"
+[dumpfile_size] 22725391
+[savefile] "/Users/chris/Documents/Stanford/12-13/Autumn/EE108B_CA/lab3_sol/waveformat.gtkw"
+[timestart] 165
+[size] 1680 923
+[pos] -1 -1
+*-4.778754 705 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] mips_testbench.
+[treeopen] mips_testbench.dut.
+[sst_width] 316
+[signals_width] 286
+[sst_expanded] 1
+[sst_vpaned_height] 293
+@28
+mips_testbench.dut.cpu.clk
+mips_testbench.dut.cpu.rst
+mips_testbench.dut.cpu.en
+mips_testbench.dut.cpu.en_if
+@24
+mips_testbench.dut.cpu.pc_if[31:0]
+@22
+mips_testbench.dut.cpu.instr_if[31:0]
+@28
+mips_testbench.dut.cpu.rst_id
+@24
+mips_testbench.dut.cpu.pc_id[31:0]
+mips_testbench.dut.cpu.instr_number_id[29:0]
+@22
+mips_testbench.dut.cpu.instr_id[31:0]
+mips_testbench.dut.cpu.d_stage.op[5:0]
+@24
+mips_testbench.dut.cpu.rs_addr_id[4:0]
+mips_testbench.dut.cpu.rt_addr_id[4:0]
+mips_testbench.dut.cpu.d_stage.rd_addr[4:0]
+mips_testbench.dut.cpu.d_stage.shamt[4:0]
+@22
+mips_testbench.dut.cpu.d_stage.funct[5:0]
+mips_testbench.dut.cpu.d_stage.immediate[15:0]
+mips_testbench.dut.cpu.if_stage.j_addr[31:0]
+mips_testbench.dut.cpu.d_stage.rs_data_in[31:0]
+mips_testbench.dut.cpu.d_stage.rt_data_in[31:0]
+mips_testbench.dut.cpu.d_stage.rs_data[31:0]
+mips_testbench.dut.cpu.d_stage.rt_data[31:0]
+@28
+mips_testbench.dut.cpu.stall
+@22
+mips_testbench.dut.cpu.alu_op_x_id[31:0]
+mips_testbench.dut.cpu.alu_op_y_id[31:0]
+@24
+mips_testbench.dut.cpu.alu_opcode_id[3:0]
+@28
+mips_testbench.dut.cpu.reg_we_id
+@24
+mips_testbench.dut.cpu.reg_write_addr_id[4:0]
+@28
+mips_testbench.dut.cpu.jump_branch_id
+mips_testbench.dut.cpu.jump_target_id
+@29
+mips_testbench.dut.cpu.jump_reg_id
+@28
+mips_testbench.dut.cpu.mem_read_id
+mips_testbench.dut.cpu.mem_we_id
+@22
+mips_testbench.dut.cpu.mem_write_data_id[31:0]
+mips_testbench.dut.cpu.alu_op_x_ex[31:0]
+mips_testbench.dut.cpu.alu_op_y_ex[31:0]
+@24
+mips_testbench.dut.cpu.alu_opcode_ex[3:0]
+@22
+mips_testbench.dut.cpu.alu_result_ex[31:0]
+@28
+mips_testbench.dut.cpu.alu_overflow
+mips_testbench.dut.cpu.reg_we_ex
+@24
+mips_testbench.dut.cpu.reg_write_addr_ex[4:0]
+@28
+mips_testbench.dut.cpu.mem_read_ex
+mips_testbench.dut.cpu.mem_we_ex
+@22
+mips_testbench.dut.cpu.mem_write_data_ex[31:0]
+@28
+mips_testbench.dut.cpu.mem_read_mem
+mips_testbench.dut.cpu.mem_we_mem
+@22
+mips_testbench.dut.cpu.alu_result_mem[31:0]
+mips_testbench.dut.cpu.mem_write_data_mem[31:0]
+@24
+mips_testbench.dut.mips_disp.block_x_write[5:0]
+mips_testbench.dut.mips_disp.block_y_write[4:0]
+@28
+mips_testbench.dut.mips_disp.color[2:0]
+mips_testbench.dut.cpu.display_we
+mips_testbench.dut.cpu.reg_we_mem
+@24
+mips_testbench.dut.cpu.reg_write_addr_mem[4:0]
+@22
+mips_testbench.dut.cpu.reg_write_data_mem[31:0]
+@28
+mips_testbench.dut.cpu.reg_we_wb
+@24
+mips_testbench.dut.cpu.reg_write_addr_wb[4:0]
+@22
+mips_testbench.dut.cpu.reg_write_data_wb[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

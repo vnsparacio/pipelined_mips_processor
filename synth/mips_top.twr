@@ -1,0 +1,616 @@
+--------------------------------------------------------------------------------
+Release 12.2 Trace  (lin)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+/opt/xilinx/ISE_DS/ISE/bin/lin/unwrapped/trce -intstyle ise -v 3 -s 1 -n 3
+-fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf -ucf
+mips_top.ucf
+
+Design file:              mips_top.ncd
+Physical constraint file: mips_top.pcf
+Device,package,speed:     xc5vlx110t,ff1136,-1 (PRODUCTION 1.70 2010-06-22, STEPPING level 0)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clock = PERIOD TIMEGRP "clock" 10 ns HIGH 50%;
+
+ 23462 paths analyzed, 952 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.589ns.
+--------------------------------------------------------------------------------
+
+Paths for end point ctrl/make_chip_data/pixel_21 (SLICE_X94Y39.SR), 755 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.411ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ctrl/gen_sync/y_7 (FF)
+  Destination:          ctrl/make_chip_data/pixel_21 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.519ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.035ns (0.651 - 0.686)
+  Source Clock:         clk_IBUF rising at 0.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: ctrl/gen_sync/y_7 to ctrl/make_chip_data/pixel_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X99Y35.DQ      Tcko                  0.450   ctrl/gen_sync/y<7>
+                                                       ctrl/gen_sync/y_7
+    SLICE_X99Y32.A1      net (fanout=18)       1.092   ctrl/gen_sync/y<7>
+    SLICE_X99Y32.A       Tilo                  0.094   mips_disp/Madd_read_addr_addsub0001_lut<6>
+                                                       mips_disp/Madd_read_addr_xor<5>11
+    SLICE_X92Y26.C6      net (fanout=66)       1.500   mips_disp/read_addr<5>
+    SLICE_X92Y26.C       Tilo                  0.094   N153
+                                                       mips_disp/Mram_block_colors20_RAMC
+    SLICE_X97Y26.A1      net (fanout=1)        0.862   N153
+    SLICE_X97Y26.A       Tilo                  0.094   inst_LPM_MUX_7
+                                                       inst_LPM_MUX2_7
+    SLICE_X97Y33.C5      net (fanout=1)        0.708   inst_LPM_MUX2_7
+    SLICE_X97Y33.CMUX    Tilo                  0.392   inst_LPM_MUX2_10
+                                                       inst_LPM_MUX2_31
+                                                       inst_LPM_MUX2_2_f7
+    SLICE_X96Y36.D2      net (fanout=1)        0.943   vga_rgb<4>
+    SLICE_X96Y36.D       Tilo                  0.094   N281
+                                                       _AUX_1<16>2
+    SLICE_X94Y39.SR      net (fanout=2)        0.649   N281
+    SLICE_X94Y39.CLK     Tsrck                 0.547   ctrl/make_chip_data/pixel<23>
+                                                       ctrl/make_chip_data/pixel_21
+    -------------------------------------------------  ---------------------------
+    Total                                      7.519ns (1.765ns logic, 5.754ns route)
+                                                       (23.5% logic, 76.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.673ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ctrl/gen_sync/y_5 (FF)
+  Destination:          ctrl/make_chip_data/pixel_21 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.257ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.035ns (0.651 - 0.686)
+  Source Clock:         clk_IBUF rising at 0.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: ctrl/gen_sync/y_5 to ctrl/make_chip_data/pixel_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X99Y35.BQ      Tcko                  0.450   ctrl/gen_sync/y<7>
+                                                       ctrl/gen_sync/y_5
+    SLICE_X99Y32.A3      net (fanout=18)       0.830   ctrl/gen_sync/y<5>
+    SLICE_X99Y32.A       Tilo                  0.094   mips_disp/Madd_read_addr_addsub0001_lut<6>
+                                                       mips_disp/Madd_read_addr_xor<5>11
+    SLICE_X92Y26.C6      net (fanout=66)       1.500   mips_disp/read_addr<5>
+    SLICE_X92Y26.C       Tilo                  0.094   N153
+                                                       mips_disp/Mram_block_colors20_RAMC
+    SLICE_X97Y26.A1      net (fanout=1)        0.862   N153
+    SLICE_X97Y26.A       Tilo                  0.094   inst_LPM_MUX_7
+                                                       inst_LPM_MUX2_7
+    SLICE_X97Y33.C5      net (fanout=1)        0.708   inst_LPM_MUX2_7
+    SLICE_X97Y33.CMUX    Tilo                  0.392   inst_LPM_MUX2_10
+                                                       inst_LPM_MUX2_31
+                                                       inst_LPM_MUX2_2_f7
+    SLICE_X96Y36.D2      net (fanout=1)        0.943   vga_rgb<4>
+    SLICE_X96Y36.D       Tilo                  0.094   N281
+                                                       _AUX_1<16>2
+    SLICE_X94Y39.SR      net (fanout=2)        0.649   N281
+    SLICE_X94Y39.CLK     Tsrck                 0.547   ctrl/make_chip_data/pixel<23>
+                                                       ctrl/make_chip_data/pixel_21
+    -------------------------------------------------  ---------------------------
+    Total                                      7.257ns (1.765ns logic, 5.492ns route)
+                                                       (24.3% logic, 75.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.701ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ctrl/gen_sync/x_10 (FF)
+  Destination:          ctrl/make_chip_data/pixel_21 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.207ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.057ns (0.651 - 0.708)
+  Source Clock:         clk_IBUF rising at 0.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: ctrl/gen_sync/x_10 to ctrl/make_chip_data/pixel_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X98Y34.CQ      Tcko                  0.450   ctrl/gen_sync/x<10>
+                                                       ctrl/gen_sync/x_10
+    SLICE_X99Y32.A2      net (fanout=12)       0.780   ctrl/gen_sync/x<10>
+    SLICE_X99Y32.A       Tilo                  0.094   mips_disp/Madd_read_addr_addsub0001_lut<6>
+                                                       mips_disp/Madd_read_addr_xor<5>11
+    SLICE_X92Y26.C6      net (fanout=66)       1.500   mips_disp/read_addr<5>
+    SLICE_X92Y26.C       Tilo                  0.094   N153
+                                                       mips_disp/Mram_block_colors20_RAMC
+    SLICE_X97Y26.A1      net (fanout=1)        0.862   N153
+    SLICE_X97Y26.A       Tilo                  0.094   inst_LPM_MUX_7
+                                                       inst_LPM_MUX2_7
+    SLICE_X97Y33.C5      net (fanout=1)        0.708   inst_LPM_MUX2_7
+    SLICE_X97Y33.CMUX    Tilo                  0.392   inst_LPM_MUX2_10
+                                                       inst_LPM_MUX2_31
+                                                       inst_LPM_MUX2_2_f7
+    SLICE_X96Y36.D2      net (fanout=1)        0.943   vga_rgb<4>
+    SLICE_X96Y36.D       Tilo                  0.094   N281
+                                                       _AUX_1<16>2
+    SLICE_X94Y39.SR      net (fanout=2)        0.649   N281
+    SLICE_X94Y39.CLK     Tsrck                 0.547   ctrl/make_chip_data/pixel<23>
+                                                       ctrl/make_chip_data/pixel_21
+    -------------------------------------------------  ---------------------------
+    Total                                      7.207ns (1.765ns logic, 5.442ns route)
+                                                       (24.5% logic, 75.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ctrl/make_chip_data/pixel_22 (SLICE_X94Y39.SR), 755 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.411ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ctrl/gen_sync/y_7 (FF)
+  Destination:          ctrl/make_chip_data/pixel_22 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.519ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.035ns (0.651 - 0.686)
+  Source Clock:         clk_IBUF rising at 0.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: ctrl/gen_sync/y_7 to ctrl/make_chip_data/pixel_22
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X99Y35.DQ      Tcko                  0.450   ctrl/gen_sync/y<7>
+                                                       ctrl/gen_sync/y_7
+    SLICE_X99Y32.A1      net (fanout=18)       1.092   ctrl/gen_sync/y<7>
+    SLICE_X99Y32.A       Tilo                  0.094   mips_disp/Madd_read_addr_addsub0001_lut<6>
+                                                       mips_disp/Madd_read_addr_xor<5>11
+    SLICE_X92Y26.C6      net (fanout=66)       1.500   mips_disp/read_addr<5>
+    SLICE_X92Y26.C       Tilo                  0.094   N153
+                                                       mips_disp/Mram_block_colors20_RAMC
+    SLICE_X97Y26.A1      net (fanout=1)        0.862   N153
+    SLICE_X97Y26.A       Tilo                  0.094   inst_LPM_MUX_7
+                                                       inst_LPM_MUX2_7
+    SLICE_X97Y33.C5      net (fanout=1)        0.708   inst_LPM_MUX2_7
+    SLICE_X97Y33.CMUX    Tilo                  0.392   inst_LPM_MUX2_10
+                                                       inst_LPM_MUX2_31
+                                                       inst_LPM_MUX2_2_f7
+    SLICE_X96Y36.D2      net (fanout=1)        0.943   vga_rgb<4>
+    SLICE_X96Y36.D       Tilo                  0.094   N281
+                                                       _AUX_1<16>2
+    SLICE_X94Y39.SR      net (fanout=2)        0.649   N281
+    SLICE_X94Y39.CLK     Tsrck                 0.547   ctrl/make_chip_data/pixel<23>
+                                                       ctrl/make_chip_data/pixel_22
+    -------------------------------------------------  ---------------------------
+    Total                                      7.519ns (1.765ns logic, 5.754ns route)
+                                                       (23.5% logic, 76.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.673ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ctrl/gen_sync/y_5 (FF)
+  Destination:          ctrl/make_chip_data/pixel_22 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.257ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.035ns (0.651 - 0.686)
+  Source Clock:         clk_IBUF rising at 0.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: ctrl/gen_sync/y_5 to ctrl/make_chip_data/pixel_22
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X99Y35.BQ      Tcko                  0.450   ctrl/gen_sync/y<7>
+                                                       ctrl/gen_sync/y_5
+    SLICE_X99Y32.A3      net (fanout=18)       0.830   ctrl/gen_sync/y<5>
+    SLICE_X99Y32.A       Tilo                  0.094   mips_disp/Madd_read_addr_addsub0001_lut<6>
+                                                       mips_disp/Madd_read_addr_xor<5>11
+    SLICE_X92Y26.C6      net (fanout=66)       1.500   mips_disp/read_addr<5>
+    SLICE_X92Y26.C       Tilo                  0.094   N153
+                                                       mips_disp/Mram_block_colors20_RAMC
+    SLICE_X97Y26.A1      net (fanout=1)        0.862   N153
+    SLICE_X97Y26.A       Tilo                  0.094   inst_LPM_MUX_7
+                                                       inst_LPM_MUX2_7
+    SLICE_X97Y33.C5      net (fanout=1)        0.708   inst_LPM_MUX2_7
+    SLICE_X97Y33.CMUX    Tilo                  0.392   inst_LPM_MUX2_10
+                                                       inst_LPM_MUX2_31
+                                                       inst_LPM_MUX2_2_f7
+    SLICE_X96Y36.D2      net (fanout=1)        0.943   vga_rgb<4>
+    SLICE_X96Y36.D       Tilo                  0.094   N281
+                                                       _AUX_1<16>2
+    SLICE_X94Y39.SR      net (fanout=2)        0.649   N281
+    SLICE_X94Y39.CLK     Tsrck                 0.547   ctrl/make_chip_data/pixel<23>
+                                                       ctrl/make_chip_data/pixel_22
+    -------------------------------------------------  ---------------------------
+    Total                                      7.257ns (1.765ns logic, 5.492ns route)
+                                                       (24.3% logic, 75.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.701ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ctrl/gen_sync/x_10 (FF)
+  Destination:          ctrl/make_chip_data/pixel_22 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.207ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.057ns (0.651 - 0.708)
+  Source Clock:         clk_IBUF rising at 0.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: ctrl/gen_sync/x_10 to ctrl/make_chip_data/pixel_22
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X98Y34.CQ      Tcko                  0.450   ctrl/gen_sync/x<10>
+                                                       ctrl/gen_sync/x_10
+    SLICE_X99Y32.A2      net (fanout=12)       0.780   ctrl/gen_sync/x<10>
+    SLICE_X99Y32.A       Tilo                  0.094   mips_disp/Madd_read_addr_addsub0001_lut<6>
+                                                       mips_disp/Madd_read_addr_xor<5>11
+    SLICE_X92Y26.C6      net (fanout=66)       1.500   mips_disp/read_addr<5>
+    SLICE_X92Y26.C       Tilo                  0.094   N153
+                                                       mips_disp/Mram_block_colors20_RAMC
+    SLICE_X97Y26.A1      net (fanout=1)        0.862   N153
+    SLICE_X97Y26.A       Tilo                  0.094   inst_LPM_MUX_7
+                                                       inst_LPM_MUX2_7
+    SLICE_X97Y33.C5      net (fanout=1)        0.708   inst_LPM_MUX2_7
+    SLICE_X97Y33.CMUX    Tilo                  0.392   inst_LPM_MUX2_10
+                                                       inst_LPM_MUX2_31
+                                                       inst_LPM_MUX2_2_f7
+    SLICE_X96Y36.D2      net (fanout=1)        0.943   vga_rgb<4>
+    SLICE_X96Y36.D       Tilo                  0.094   N281
+                                                       _AUX_1<16>2
+    SLICE_X94Y39.SR      net (fanout=2)        0.649   N281
+    SLICE_X94Y39.CLK     Tsrck                 0.547   ctrl/make_chip_data/pixel<23>
+                                                       ctrl/make_chip_data/pixel_22
+    -------------------------------------------------  ---------------------------
+    Total                                      7.207ns (1.765ns logic, 5.442ns route)
+                                                       (24.5% logic, 75.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ctrl/make_chip_data/pixel_23 (SLICE_X94Y39.SR), 755 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.411ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ctrl/gen_sync/y_7 (FF)
+  Destination:          ctrl/make_chip_data/pixel_23 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.519ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.035ns (0.651 - 0.686)
+  Source Clock:         clk_IBUF rising at 0.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: ctrl/gen_sync/y_7 to ctrl/make_chip_data/pixel_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X99Y35.DQ      Tcko                  0.450   ctrl/gen_sync/y<7>
+                                                       ctrl/gen_sync/y_7
+    SLICE_X99Y32.A1      net (fanout=18)       1.092   ctrl/gen_sync/y<7>
+    SLICE_X99Y32.A       Tilo                  0.094   mips_disp/Madd_read_addr_addsub0001_lut<6>
+                                                       mips_disp/Madd_read_addr_xor<5>11
+    SLICE_X92Y26.C6      net (fanout=66)       1.500   mips_disp/read_addr<5>
+    SLICE_X92Y26.C       Tilo                  0.094   N153
+                                                       mips_disp/Mram_block_colors20_RAMC
+    SLICE_X97Y26.A1      net (fanout=1)        0.862   N153
+    SLICE_X97Y26.A       Tilo                  0.094   inst_LPM_MUX_7
+                                                       inst_LPM_MUX2_7
+    SLICE_X97Y33.C5      net (fanout=1)        0.708   inst_LPM_MUX2_7
+    SLICE_X97Y33.CMUX    Tilo                  0.392   inst_LPM_MUX2_10
+                                                       inst_LPM_MUX2_31
+                                                       inst_LPM_MUX2_2_f7
+    SLICE_X96Y36.D2      net (fanout=1)        0.943   vga_rgb<4>
+    SLICE_X96Y36.D       Tilo                  0.094   N281
+                                                       _AUX_1<16>2
+    SLICE_X94Y39.SR      net (fanout=2)        0.649   N281
+    SLICE_X94Y39.CLK     Tsrck                 0.547   ctrl/make_chip_data/pixel<23>
+                                                       ctrl/make_chip_data/pixel_23
+    -------------------------------------------------  ---------------------------
+    Total                                      7.519ns (1.765ns logic, 5.754ns route)
+                                                       (23.5% logic, 76.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.673ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ctrl/gen_sync/y_5 (FF)
+  Destination:          ctrl/make_chip_data/pixel_23 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.257ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.035ns (0.651 - 0.686)
+  Source Clock:         clk_IBUF rising at 0.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: ctrl/gen_sync/y_5 to ctrl/make_chip_data/pixel_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X99Y35.BQ      Tcko                  0.450   ctrl/gen_sync/y<7>
+                                                       ctrl/gen_sync/y_5
+    SLICE_X99Y32.A3      net (fanout=18)       0.830   ctrl/gen_sync/y<5>
+    SLICE_X99Y32.A       Tilo                  0.094   mips_disp/Madd_read_addr_addsub0001_lut<6>
+                                                       mips_disp/Madd_read_addr_xor<5>11
+    SLICE_X92Y26.C6      net (fanout=66)       1.500   mips_disp/read_addr<5>
+    SLICE_X92Y26.C       Tilo                  0.094   N153
+                                                       mips_disp/Mram_block_colors20_RAMC
+    SLICE_X97Y26.A1      net (fanout=1)        0.862   N153
+    SLICE_X97Y26.A       Tilo                  0.094   inst_LPM_MUX_7
+                                                       inst_LPM_MUX2_7
+    SLICE_X97Y33.C5      net (fanout=1)        0.708   inst_LPM_MUX2_7
+    SLICE_X97Y33.CMUX    Tilo                  0.392   inst_LPM_MUX2_10
+                                                       inst_LPM_MUX2_31
+                                                       inst_LPM_MUX2_2_f7
+    SLICE_X96Y36.D2      net (fanout=1)        0.943   vga_rgb<4>
+    SLICE_X96Y36.D       Tilo                  0.094   N281
+                                                       _AUX_1<16>2
+    SLICE_X94Y39.SR      net (fanout=2)        0.649   N281
+    SLICE_X94Y39.CLK     Tsrck                 0.547   ctrl/make_chip_data/pixel<23>
+                                                       ctrl/make_chip_data/pixel_23
+    -------------------------------------------------  ---------------------------
+    Total                                      7.257ns (1.765ns logic, 5.492ns route)
+                                                       (24.3% logic, 75.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.701ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ctrl/gen_sync/x_10 (FF)
+  Destination:          ctrl/make_chip_data/pixel_23 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.207ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.057ns (0.651 - 0.708)
+  Source Clock:         clk_IBUF rising at 0.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: ctrl/gen_sync/x_10 to ctrl/make_chip_data/pixel_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X98Y34.CQ      Tcko                  0.450   ctrl/gen_sync/x<10>
+                                                       ctrl/gen_sync/x_10
+    SLICE_X99Y32.A2      net (fanout=12)       0.780   ctrl/gen_sync/x<10>
+    SLICE_X99Y32.A       Tilo                  0.094   mips_disp/Madd_read_addr_addsub0001_lut<6>
+                                                       mips_disp/Madd_read_addr_xor<5>11
+    SLICE_X92Y26.C6      net (fanout=66)       1.500   mips_disp/read_addr<5>
+    SLICE_X92Y26.C       Tilo                  0.094   N153
+                                                       mips_disp/Mram_block_colors20_RAMC
+    SLICE_X97Y26.A1      net (fanout=1)        0.862   N153
+    SLICE_X97Y26.A       Tilo                  0.094   inst_LPM_MUX_7
+                                                       inst_LPM_MUX2_7
+    SLICE_X97Y33.C5      net (fanout=1)        0.708   inst_LPM_MUX2_7
+    SLICE_X97Y33.CMUX    Tilo                  0.392   inst_LPM_MUX2_10
+                                                       inst_LPM_MUX2_31
+                                                       inst_LPM_MUX2_2_f7
+    SLICE_X96Y36.D2      net (fanout=1)        0.943   vga_rgb<4>
+    SLICE_X96Y36.D       Tilo                  0.094   N281
+                                                       _AUX_1<16>2
+    SLICE_X94Y39.SR      net (fanout=2)        0.649   N281
+    SLICE_X94Y39.CLK     Tsrck                 0.547   ctrl/make_chip_data/pixel<23>
+                                                       ctrl/make_chip_data/pixel_23
+    -------------------------------------------------  ---------------------------
+    Total                                      7.207ns (1.765ns logic, 5.442ns route)
+                                                       (24.5% logic, 75.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clock = PERIOD TIMEGRP "clock" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point trap_button_unit/debounce/state/q_0 (SLICE_X60Y40.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.455ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               trap_button_unit/debounce/state/q_1 (FF)
+  Destination:          trap_button_unit/debounce/state/q_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.485ns (Levels of Logic = 1)
+  Clock Path Skew:      0.030ns (0.490 - 0.460)
+  Source Clock:         clk_IBUF rising at 10.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: trap_button_unit/debounce/state/q_1 to trap_button_unit/debounce/state/q_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X59Y41.DQ      Tcko                  0.414   trap_button_unit/debounce/state/q<1>
+                                                       trap_button_unit/debounce/state/q_1
+    SLICE_X60Y40.D6      net (fanout=3)        0.287   trap_button_unit/debounce/state/q<1>
+    SLICE_X60Y40.CLK     Tah         (-Th)     0.216   trap_button_unit/debounce/state/q<0>
+                                                       trap_button_unit/debounce/next_state_d<0>1
+                                                       trap_button_unit/debounce/state/q_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.485ns (0.198ns logic, 0.287ns route)
+                                                       (40.8% logic, 59.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point i2c_controller/sda_shift_11 (SLICE_X29Y72.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.475ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               i2c_controller/sda_shift_10 (FF)
+  Destination:          i2c_controller/sda_shift_11 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.475ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_IBUF rising at 10.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: i2c_controller/sda_shift_10 to i2c_controller/sda_shift_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y72.CQ      Tcko                  0.414   i2c_controller/sda_shift<11>
+                                                       i2c_controller/sda_shift_10
+    SLICE_X29Y72.D6      net (fanout=1)        0.256   i2c_controller/sda_shift<10>
+    SLICE_X29Y72.CLK     Tah         (-Th)     0.195   i2c_controller/sda_shift<11>
+                                                       i2c_controller/sda_shift_mux0000<16>1
+                                                       i2c_controller/sda_shift_11
+    -------------------------------------------------  ---------------------------
+    Total                                      0.475ns (0.219ns logic, 0.256ns route)
+                                                       (46.1% logic, 53.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point i2c_controller/sda_shift_1 (SLICE_X29Y73.C6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.486ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               i2c_controller/sda_shift_0 (FF)
+  Destination:          i2c_controller/sda_shift_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.486ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_IBUF rising at 10.000ns
+  Destination Clock:    clk_IBUF rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: i2c_controller/sda_shift_0 to i2c_controller/sda_shift_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y73.AQ      Tcko                  0.414   i2c_controller/sda_shift<2>
+                                                       i2c_controller/sda_shift_0
+    SLICE_X29Y73.C6      net (fanout=1)        0.267   i2c_controller/sda_shift<0>
+    SLICE_X29Y73.CLK     Tah         (-Th)     0.195   i2c_controller/sda_shift<2>
+                                                       i2c_controller/sda_shift_mux0000<26>1
+                                                       i2c_controller/sda_shift_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.486ns (0.219ns logic, 0.267ns route)
+                                                       (45.1% logic, 54.9% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clock = PERIOD TIMEGRP "clock" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 8.300ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.850ns (Twpl)
+  Physical resource: trap_button_unit/sync/ff3/q<0>/CLK
+  Logical resource: trap_button_unit/sync/ff3/Mshreg_q_0/CLK
+  Location pin: SLICE_X64Y40.CLK
+  Clock network: clk_IBUF
+--------------------------------------------------------------------------------
+Slack: 8.300ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.850ns (Twph)
+  Physical resource: trap_button_unit/sync/ff3/q<0>/CLK
+  Logical resource: trap_button_unit/sync/ff3/Mshreg_q_0/CLK
+  Location pin: SLICE_X64Y40.CLK
+  Clock network: clk_IBUF
+--------------------------------------------------------------------------------
+Slack: 8.300ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.850ns (Twpl)
+  Physical resource: step_button_unit/sync/ff3/q<0>/CLK
+  Logical resource: step_button_unit/sync/ff3/Mshreg_q_0/CLK
+  Location pin: SLICE_X68Y35.CLK
+  Clock network: clk_IBUF
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.589|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 23462 paths, 0 nets, and 1531 connections
+
+Design statistics:
+   Minimum period:   7.589ns{1}   (Maximum frequency: 131.770MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Feb 26 22:54:13 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 300 MB
+
+
+

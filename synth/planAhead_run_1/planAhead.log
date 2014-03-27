@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# PlanAhead v12.2
+# Build 65285 by hdbuild on Wed Jun 23 14:46:30 PDT 2010
+# Start of session at: Tue Feb 26 23:14:05 2013
+# Process ID: 24353
+# Log file: /afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/planAhead_run_1/planAhead.log
+# Journal file: /afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [HD-Licensing 0] Attempting to get a license: PlanAhead
+INFO: [HD-Licensing 1] Got a license: PlanAhead
+INFO: [HD-Licensing 3] Your PlanAhead license expires in -57 day(s)
+INFO: [HD-ArchReader 0] Loading parts and site information from /opt/xilinx/ISE_DS/PlanAhead/parts/arch.xml
+INFO: [HD-RTPRIM 0] Parsing RTL primitives file '/opt/xilinx/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml'
+INFO: [HD-RTPRIM 1] Finished Parsing RTL primitives file '/opt/xilinx/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml'
+source /opt/xilinx/ISE_DS/PlanAhead/scripts/sdc.tcl
+start_gui -source /afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/pa.fromNcd.tcl
+# create_project -name mips -dir "/afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/planAhead_run_1" -part xc5vlx110tff1136-1
+# set srcset [get_property srcset [current_run -impl]]
+# set_property design_mode GateLvl $srcset
+# set_property edif_top_file "/afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/mips_top.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth} }
+# set_param project.paUcfFile  "mips_top.ucf"
+# add_files "mips_top.ucf" -fileset [get_property constrset [current_run]]
+# open_netlist_design
+INFO: Run is defaulting to constrset part: xc5vlx110tff1136-1
+INFO: [HD-EDIFIN 0] Parsing Edif File './.HDI-PlanAhead-24353-ee108-7b.stanford.edu/ngc2edif/mips_top.edif'
+INFO: [HD-EDIFIN 1] Finished Parsing Edif File './.HDI-PlanAhead-24353-ee108-7b.stanford.edu/ngc2edif/mips_top.edif'
+INFO: [HD-ArchReader 18] Reading macro library /opt/xilinx/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn
+INFO: [HD-EDIFIN 0] Parsing Edif File '/opt/xilinx/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn'
+INFO: [HD-EDIFIN 1] Finished Parsing Edif File '/opt/xilinx/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn'
+WARN: [HD-NETLIST 3] Netlist 'mips_top' is not ideal for floorplanning, since the cellview 'mips_top' defined in file 'mips_top.ngc' contains large number of primitives. Please consider enabling hierarchy in synthesis before floorplan. You can enable hierarchy in XST by setting '-keep_hierarchy=yes' or '-netlist_hierarchy=rebuilt' flags.
+INFO: [HD-ArchReader 15] Reading bus macro file /opt/xilinx/ISE_DS/PlanAhead/./parts/xilinx/virtex5/pr_bus_macros.xml
+INFO: [HD-ArchReader 7] Loading clock regions from /opt/xilinx/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ClockRegion.xml
+INFO: [HD-ArchReader 8] Loading clock buffers from /opt/xilinx/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ClockBuffers.xml
+INFO: [HD-ArchReader 3] Loading package from /opt/xilinx/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ff1136/Package.xml
+INFO: [HD-ArchReader 4] Loading io standards from /opt/xilinx/ISE_DS/PlanAhead/./parts/xilinx/virtex5/IOStandards.xml
+INFO: [HD-ArchReader 5] Loading pkg sso from /opt/xilinx/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ff1136/SSORules.xml
+INFO: [HD-GDRC 0] Loading list of drcs for the architecture : /opt/xilinx/ISE_DS/PlanAhead/./parts/xilinx/virtex5/drc.xml
+INFO: [HD-UCFReader 0] Parsing UCF File : ./mips_top.ucf
+INFO: [HD-UCFReader 1] Finished Parsing UCF File : ./mips_top.ucf
+
+DESIGN RULE CHECK VIOLATION REPORT
+   Build: PlanAhead v12.2 by hdbuild
+          on  Wed Jun 23 14:46:30 PDT 2010
+  Report: by sparacio on host ee108-7b.stanford.edu, pid 24353
+          on Tue Feb 26 23:14:33 2013
+
+REPORT SUMMARY
+            Netlist: synth_results
+          Floorplan: <none>
+      Design limits: <entire design considered>
+             Checks: Unknown block name
+                     Unknown Unisim pin name
+                     Mismatching Attribute
+           Max vios: <unlimited>
+         Vios found: 0
+
+REPORT DETAILS
+INFO: [HD-LIB 0] Reading timing library /opt/xilinx/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5.lib .
+INFO: [HD-LIB 1] Done reading timing library /opt/xilinx/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5.lib .
+# read_xdl -file "/afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/mips_top.xdl"
+INFO: [HD-PAR 0] Parsing Placement File : /afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/mips_top.xdl
+INFO: [HD-PAR 1] Finished Parsing Placement File : /afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/mips_top.xdl
+INFO: [HD-PAR 2] Placed 2691 instances
+# if {[catch {read_twx -name results_1 -file "/afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/mips_top.twx"} eInfo]} {
+#    puts "WARNING: there was a problem importing \"/afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/mips_top.twx\": $eInfo"
+# }

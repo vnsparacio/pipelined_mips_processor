@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DARoots Version="1" Minor="6">
+	<FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+		<Filter Type="Constrs"/>
+		<Root Path="/afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/mips_top.ucf">
+		</Root>
+		<Config>
+			<Option Name="TargetPart" Val="xc5vlx110tff1136-1"/>
+		</Config>
+	</FileSet>
+</DARoots>
+

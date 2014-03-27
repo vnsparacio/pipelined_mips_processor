@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# PlanAhead v12.2
+# Build 65285 by hdbuild on Wed Jun 23 14:46:30 PDT 2010
+# Start of session at: Tue Feb 26 23:05:21 2013
+# Process ID: 24079
+# Log file: /afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/planAhead_run_2/planAhead.log
+# Journal file: /afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [HD-Licensing 0] Attempting to get a license: PlanAhead
+INFO: [HD-Licensing 1] Got a license: PlanAhead
+INFO: [HD-Licensing 3] Your PlanAhead license expires in -57 day(s)
+INFO: [HD-ArchReader 0] Loading parts and site information from /opt/xilinx/ISE_DS/PlanAhead/parts/arch.xml
+INFO: [HD-RTPRIM 0] Parsing RTL primitives file '/opt/xilinx/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml'
+INFO: [HD-RTPRIM 1] Finished Parsing RTL primitives file '/opt/xilinx/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml'
+source /opt/xilinx/ISE_DS/PlanAhead/scripts/sdc.tcl
+start_gui -source /afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/pa.fromNcd.tcl
+# create_project -name mips -dir "/afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/planAhead_run_2" -part xc5vlx110tff1136-1
+ERROR: [HD-DB 2] Project already exists on disk, please use '-force' option to overwrite: 
+     /afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/planAhead_run_2/mips.ppr
+     /afs/ir.stanford.edu/users/s/p/sparacio/Desktop/lab3/synth/planAhead_run_2/mips.data
+exit
+INFO: [HD-Application 0] Exiting PlanAhead...
+INFO: [HD-Licensing 2] Releasing license: PlanAhead
